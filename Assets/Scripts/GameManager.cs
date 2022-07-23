@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour{
     int rolledDice3;
     int rolledDice4;
 
+    bool isRolling;
     bool isBoosting;
 
     // Define a variável para acessar o script do player
@@ -53,17 +54,22 @@ public class GameManager : MonoBehaviour{
         moveRunnersRunner3 = runner3.GetComponent<MoveRunners>();
         moveRunnersRunner4 = runner4.GetComponent<MoveRunners>();
 
-        RollDice();
+        //RollDice();
 
-        //InvokeRepeating("NPCRunnersSpeed1", 1f, 1f);
-        //InvokeRepeating("NPCRunnersSpeed2", 1f, 1f);
-        //InvokeRepeating("NPCRunnersSpeed3", 1f, 1f);
+        //StartCoroutine(RollPlayerDice());
+
+        InvokeRepeating("NPCRunnersSpeed1", 1f, 1f);
+        InvokeRepeating("NPCRunnersSpeed2", 1f, 1f);
+        InvokeRepeating("NPCRunnersSpeed3", 1f, 1f);
         InvokeRepeating("NPCRunnersSpeed4", 1f, 1f);
     }
 
     void Update(){
-        if (Input.GetKeyDown("space")){
-            RollDice();    
+        if (Input.GetKeyDown("space") && (isRolling == false)){
+            //RollDice();
+            Debug.Log("Clicked");
+            isRolling = true;
+            StartCoroutine(RollPlayerDice());   
         }
 
         if (Input.GetKeyDown("return")){
@@ -78,8 +84,8 @@ public class GameManager : MonoBehaviour{
         }
     }
 
-    // Somente para rolagem do player
-    void RollDice(){
+    IEnumerator RollPlayerDice(){
+        yield return new WaitForSeconds(1);
         Debug.Log("Rolled");
         // Rola o dado dentro de um valor especificado
         rolledDicePlayer = Random.Range(1, 20);
@@ -94,14 +100,35 @@ public class GameManager : MonoBehaviour{
         textDice2.text = rolledDice2.ToString();
         textDice3.text = rolledDice3.ToString();
         textDice4.text = rolledDice4.ToString();
+
+        isRolling = false;
     }
+
+    // Somente para rolagem do player
+    /*void RollDice(){
+        Debug.Log("Rolled");
+        // Rola o dado dentro de um valor especificado
+        rolledDicePlayer = Random.Range(1, 20);
+        rolledDice1 = Random.Range(1, 20);
+        rolledDice2 = Random.Range(1, 20);
+        rolledDice3 = Random.Range(1, 20);
+        rolledDice4 = Random.Range(1, 20);
+
+        // Atribui o valor rolado ao campo de texto do objeto
+        textDicePlayer.text = rolledDicePlayer.ToString();
+        textDice1.text = rolledDice1.ToString();
+        textDice2.text = rolledDice2.ToString();
+        textDice3.text = rolledDice3.ToString();
+        textDice4.text = rolledDice4.ToString();
+    }*/
 
     // Somente para escolha dos dados do player
     void ChooseNumber(){
         if ((rolledDicePlayer == rolledDice1) || (rolledDicePlayer == rolledDice2) || (rolledDicePlayer == rolledDice3) || (rolledDicePlayer == rolledDice4)){
             Debug.Log("Right");
             moveRunnersPlayer.speed += 1;
-            RollDice();
+            //RollDice();
+            RollPlayerDice();
         }
         else{
             Debug.Log("Wrong");
@@ -118,7 +145,6 @@ public class GameManager : MonoBehaviour{
     void NPCRunnersSpeed1(){
         if (isBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
-            Debug.Log(rollSpeedRunners);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner1.speed = 10;
@@ -133,7 +159,6 @@ public class GameManager : MonoBehaviour{
     void NPCRunnersSpeed2(){
         if (isBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
-            Debug.Log(rollSpeedRunners);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner2.speed = 10;
@@ -148,7 +173,6 @@ public class GameManager : MonoBehaviour{
     void NPCRunnersSpeed3(){
         if (isBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
-            Debug.Log(rollSpeedRunners);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner3.speed = 10;
@@ -163,7 +187,6 @@ public class GameManager : MonoBehaviour{
     void NPCRunnersSpeed4(){
         if (isBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
-            Debug.Log(rollSpeedRunners);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner4.speed = 10;
