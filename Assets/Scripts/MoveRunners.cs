@@ -11,7 +11,5 @@ public class MoveRunners : MonoBehaviour{
     void Update(){
         distanceTravelled += speed * Time.deltaTime;
         transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
-        // O carro rotaciona incorretamente
-        //transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled);
     }
 }

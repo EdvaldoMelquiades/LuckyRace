@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Runner1
+  - Runner2
+  - Runner3
+  - Runner4
   layers:
   - Default
   - TransparentFX
