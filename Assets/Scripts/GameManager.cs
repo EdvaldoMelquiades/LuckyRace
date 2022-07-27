@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour{
     int rolledDice4;
 
     bool isRolling;
-    bool isBoosting;
+    bool isNPCsBoosting;
 
     // Define a variável para acessar o script do player
     MoveRunners moveRunnersPlayer;
@@ -143,59 +143,59 @@ public class GameManager : MonoBehaviour{
 
     // Aumenta a velocidade dos NPCs caso tire de 1 a 3 no D20
     void NPCRunnersSpeed1(){
-        if (isBoosting == false){
+        if (isNPCsBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner1.speed = 10;
-                isBoosting = true;
+                isNPCsBoosting = true;
             }
         }
         else{
             moveRunnersRunner1.speed = 5;
-            isBoosting = false;
+            isNPCsBoosting = false;
         }
     }
     void NPCRunnersSpeed2(){
-        if (isBoosting == false){
+        if (isNPCsBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner2.speed = 10;
-                isBoosting = true;
+                isNPCsBoosting = true;
             }
         }
         else{
             moveRunnersRunner2.speed = 5;
-            isBoosting = false;
+            isNPCsBoosting = false;
         }
     }
     void NPCRunnersSpeed3(){
-        if (isBoosting == false){
+        if (isNPCsBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner3.speed = 10;
-                isBoosting = true;
+                isNPCsBoosting = true;
             }
         }
         else{
             moveRunnersRunner3.speed = 5;
-            isBoosting = false;
+            isNPCsBoosting = false;
         }
     }
     void NPCRunnersSpeed4(){
-        if (isBoosting == false){
+        if (isNPCsBoosting == false){
             int rollSpeedRunners = Random.Range(1, 20);
 
             if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
                 moveRunnersRunner4.speed = 10;
-                isBoosting = true;
+                isNPCsBoosting = true;
             }
         }
         else{
             moveRunnersRunner4.speed = 5;
-            isBoosting = false;
+            isNPCsBoosting = false;
         }
     }
 }
