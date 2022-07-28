@@ -4,97 +4,68 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour{
-    // Variáveis para o texto dos dados
-    private TextMeshProUGUI  textDicePlayer;
-    private TextMeshProUGUI  textDice1;
-    private TextMeshProUGUI  textDice2;
-    private TextMeshProUGUI  textDice3;
-    private TextMeshProUGUI  textDice4;
+public class GameManager : MonoBehaviour
+{
+    [SerializeField] private TextMeshProUGUI  textDicePlayer;
+    [SerializeField] private TextMeshProUGUI  textDice1;
+    [SerializeField] private TextMeshProUGUI  textDice2;
+    [SerializeField] private TextMeshProUGUI  textDice3;
+    [SerializeField] private TextMeshProUGUI  textDice4;
 
-    // Variáveis para os números sorteados em cada dado
-    int rolledDicePlayer;
-    int rolledDice1;
-    int rolledDice2;
-    int rolledDice3;
-    int rolledDice4;
+    private int rolledDicePlayer;
+    private int rolledDice1;
+    private int rolledDice2;
+    private int rolledDice3;
+    private int rolledDice4;
 
-    bool isRolling;
-    bool isNPCsBoosting;
+    private bool isRolling;
 
-    // Define a variável para acessar o script do player
-    MoveRunners moveRunnersPlayer;
+    private MoveRunners moveRunnersPlayer;
 
-    // Define a variável para acessar o script dos NPCs
-    MoveRunners moveRunnersRunner1;
-    MoveRunners moveRunnersRunner2;
-    MoveRunners moveRunnersRunner3;
-    MoveRunners moveRunnersRunner4;
+    [SerializeField] private GameObject player;
 
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject runner1;
-    [SerializeField] GameObject runner2;
-    [SerializeField] GameObject runner3;
-    [SerializeField] GameObject runner4;
-
-    void Start(){
-        // Captura o campo texto dos dados
-        textDicePlayer = GameObject.Find ("PlayerDiceText").GetComponent<TextMeshProUGUI> ();
-        textDice1 = GameObject.Find ("Dice1Text").GetComponent<TextMeshProUGUI> ();
-        textDice2 = GameObject.Find ("Dice2Text").GetComponent<TextMeshProUGUI> ();
-        textDice3 = GameObject.Find ("Dice3Text").GetComponent<TextMeshProUGUI> ();
-        textDice4 = GameObject.Find ("Dice4Text").GetComponent<TextMeshProUGUI> ();
-
-        // Captura o script do player
+    void Start()
+    {
         moveRunnersPlayer = player.GetComponent<MoveRunners>();
 
-        // Captura o script do NPC
-        moveRunnersRunner1 = runner1.GetComponent<MoveRunners>();
-        moveRunnersRunner2 = runner2.GetComponent<MoveRunners>();
-        moveRunnersRunner3 = runner3.GetComponent<MoveRunners>();
-        moveRunnersRunner4 = runner4.GetComponent<MoveRunners>();
-
-        //RollDice();
-
-        //StartCoroutine(RollPlayerDice());
-
-        InvokeRepeating("NPCRunnersSpeed1", 1f, 1f);
-        InvokeRepeating("NPCRunnersSpeed2", 1f, 1f);
-        InvokeRepeating("NPCRunnersSpeed3", 1f, 1f);
-        InvokeRepeating("NPCRunnersSpeed4", 1f, 1f);
+        StartCoroutine(RollPlayerDice());
     }
 
-    void Update(){
-        if (Input.GetKeyDown("space") && (isRolling == false)){
-            //RollDice();
-            Debug.Log("Clicked");
+    void Update()
+    {
+        if (Input.GetKeyDown("space") && (isRolling == false))
+        {
             isRolling = true;
             StartCoroutine(RollPlayerDice());   
         }
 
-        if (Input.GetKeyDown("return")){
-            ChooseNumber();
+        if (Input.GetKeyDown("return"))
+        {
+            StartCoroutine(ChooseNumber());
         }
-        if (Input.GetKeyDown("backspace")){
+
+        if (Input.GetKeyDown("backspace"))
+        {
             SceneManager.LoadScene(0);
             Time.timeScale = 1;
         }
-        if (Input.GetKeyDown("escape")){
+
+        if (Input.GetKeyDown("escape"))
+        {
             Application.Quit();
         }
     }
 
-    IEnumerator RollPlayerDice(){
+    IEnumerator RollPlayerDice()
+    {
         yield return new WaitForSeconds(1);
-        Debug.Log("Rolled");
-        // Rola o dado dentro de um valor especificado
+
         rolledDicePlayer = Random.Range(1, 20);
         rolledDice1 = Random.Range(1, 20);
         rolledDice2 = Random.Range(1, 20);
         rolledDice3 = Random.Range(1, 20);
         rolledDice4 = Random.Range(1, 20);
 
-        // Atribui o valor rolado ao campo de texto do objeto
         textDicePlayer.text = rolledDicePlayer.ToString();
         textDice1.text = rolledDice1.ToString();
         textDice2.text = rolledDice2.ToString();
@@ -104,98 +75,14 @@ public class GameManager : MonoBehaviour{
         isRolling = false;
     }
 
-    // Somente para rolagem do player
-    /*void RollDice(){
-        Debug.Log("Rolled");
-        // Rola o dado dentro de um valor especificado
-        rolledDicePlayer = Random.Range(1, 20);
-        rolledDice1 = Random.Range(1, 20);
-        rolledDice2 = Random.Range(1, 20);
-        rolledDice3 = Random.Range(1, 20);
-        rolledDice4 = Random.Range(1, 20);
-
-        // Atribui o valor rolado ao campo de texto do objeto
-        textDicePlayer.text = rolledDicePlayer.ToString();
-        textDice1.text = rolledDice1.ToString();
-        textDice2.text = rolledDice2.ToString();
-        textDice3.text = rolledDice3.ToString();
-        textDice4.text = rolledDice4.ToString();
-    }*/
-
-    // Somente para escolha dos dados do player
-    void ChooseNumber(){
-        if ((rolledDicePlayer == rolledDice1) || (rolledDicePlayer == rolledDice2) || (rolledDicePlayer == rolledDice3) || (rolledDicePlayer == rolledDice4)){
-            Debug.Log("Right");
-            moveRunnersPlayer.speed += 1;
-            //RollDice();
-            RollPlayerDice();
-        }
-        else{
-            Debug.Log("Wrong");
-            if (moveRunnersPlayer.speed <= 3){
-                moveRunnersPlayer.speed = 0;
-            }
-            else{
-                moveRunnersPlayer.speed -= 3;
-            }
-        }
-    }
-
-    // Aumenta a velocidade dos NPCs caso tire de 1 a 3 no D20
-    void NPCRunnersSpeed1(){
-        if (isNPCsBoosting == false){
-            int rollSpeedRunners = Random.Range(1, 20);
-
-            if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
-                moveRunnersRunner1.speed = 10;
-                isNPCsBoosting = true;
-            }
-        }
-        else{
-            moveRunnersRunner1.speed = 5;
-            isNPCsBoosting = false;
-        }
-    }
-    void NPCRunnersSpeed2(){
-        if (isNPCsBoosting == false){
-            int rollSpeedRunners = Random.Range(1, 20);
-
-            if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
-                moveRunnersRunner2.speed = 10;
-                isNPCsBoosting = true;
-            }
-        }
-        else{
-            moveRunnersRunner2.speed = 5;
-            isNPCsBoosting = false;
-        }
-    }
-    void NPCRunnersSpeed3(){
-        if (isNPCsBoosting == false){
-            int rollSpeedRunners = Random.Range(1, 20);
-
-            if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
-                moveRunnersRunner3.speed = 10;
-                isNPCsBoosting = true;
-            }
-        }
-        else{
-            moveRunnersRunner3.speed = 5;
-            isNPCsBoosting = false;
-        }
-    }
-    void NPCRunnersSpeed4(){
-        if (isNPCsBoosting == false){
-            int rollSpeedRunners = Random.Range(1, 20);
-
-            if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2) || (rollSpeedRunners == 3)){
-                moveRunnersRunner4.speed = 10;
-                isNPCsBoosting = true;
-            }
-        }
-        else{
-            moveRunnersRunner4.speed = 5;
-            isNPCsBoosting = false;
+    IEnumerator ChooseNumber()
+    {
+        if ((rolledDicePlayer == rolledDice1) || (rolledDicePlayer == rolledDice2) || (rolledDicePlayer == rolledDice3) || (rolledDicePlayer == rolledDice4))
+        {
+            moveRunnersPlayer.speed = 10;
+            StartCoroutine(RollPlayerDice());
+            yield return new WaitForSeconds(1);
+            moveRunnersPlayer.speed = 5;
         }
     }
 }

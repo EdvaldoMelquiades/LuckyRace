@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 1109542310}
-  speed: 4
+  speed: 5
 --- !u!212 &382030171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 1109542310}
-  speed: 4
+  speed: 5
 --- !u!212 &811194551
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 1109542310}
-  speed: 4
+  speed: 5
 --- !u!212 &1003774084
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2247,7 +2247,7 @@ GameObject:
   - component: {fileID: 1210747825}
   - component: {fileID: 1210747824}
   - component: {fileID: 1210747823}
-  - component: {fileID: 1210747822}
+  - component: {fileID: 1210747827}
   m_Layer: 0
   m_Name: EndLine
   m_TagString: Untagged
@@ -2255,28 +2255,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1210747822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210747821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f087190bec2e52b47b9fb7133d6d0fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lapCompletedPlayer: 0
-  lapCompletedRunner1: 0
-  lapCompletedRunner2: 0
-  lapCompletedRunner3: 0
-  lapCompletedRunner4: 0
-  endRacePanel: {fileID: 86880259}
-  endRace1st: {fileID: 1129012251}
-  endRace2nd: {fileID: 1739127219}
-  endRace3rd: {fileID: 521508410}
-  endRaceGameOver: {fileID: 1251186476}
 --- !u!50 &1210747823
 Rigidbody2D:
   serializedVersion: 4
@@ -2391,6 +2369,33 @@ Transform:
   m_Father: {fileID: 2109899170}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210747827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210747821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f087190bec2e52b47b9fb7133d6d0fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lapCompletedPlayer: 0
+  lapCompletedRunner1: 0
+  lapCompletedRunner2: 0
+  lapCompletedRunner3: 0
+  lapCompletedRunner4: 0
+  endRacePanel: {fileID: 86880259}
+  endRace1st: {fileID: 1129012251}
+  endRace2nd: {fileID: 1739127219}
+  endRace3rd: {fileID: 521508410}
+  endRaceGameOver: {fileID: 1251186476}
+  textPlayerLaps: {fileID: 766885168}
+  textRunner1Laps: {fileID: 160975286}
+  textRunner2Laps: {fileID: 617782492}
+  textRunner3Laps: {fileID: 1623028730}
+  textRunner4Laps: {fileID: 2049688647}
 --- !u!1 &1251186476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,7 +2945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 1109542310}
-  speed: 4
+  speed: 5
 --- !u!61 &1475256754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3269,7 +3274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 1109542310}
-  speed: 4
+  speed: 5
 --- !u!212 &1584747224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4638,6 +4643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136629936}
   - component: {fileID: 2136629937}
+  - component: {fileID: 2136629938}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -4672,7 +4678,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432697efc3aee8c4da1bd8fd2a1aed90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textDicePlayer: {fileID: 452891447}
+  textDice1: {fileID: 1993731436}
+  textDice2: {fileID: 1514509347}
+  textDice3: {fileID: 1971057465}
+  textDice4: {fileID: 945822357}
   player: {fileID: 1475256750}
+--- !u!114 &2136629938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136629935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cceda3c41b46c147beeae9ced46c80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   runner1: {fileID: 811194549}
   runner2: {fileID: 1003774082}
   runner3: {fileID: 1584747222}
