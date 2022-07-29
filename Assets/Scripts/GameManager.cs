@@ -6,42 +6,44 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI  textDicePlayer;
-    [SerializeField] private TextMeshProUGUI  textDice1;
-    [SerializeField] private TextMeshProUGUI  textDice2;
-    [SerializeField] private TextMeshProUGUI  textDice3;
-    [SerializeField] private TextMeshProUGUI  textDice4;
+    public static GameManager Instance;
 
-    private int rolledDicePlayer;
-    private int rolledDice1;
-    private int rolledDice2;
-    private int rolledDice3;
-    private int rolledDice4;
+    [SerializeField] public TextMeshProUGUI  textDicePlayer;
+    [SerializeField] public TextMeshProUGUI  textDice1;
+    [SerializeField] public TextMeshProUGUI  textDice2;
+    [SerializeField] public TextMeshProUGUI  textDice3;
+    [SerializeField] public TextMeshProUGUI  textDice4;
 
-    private bool isRolling;
+    public bool isRolling;
 
-    private MoveRunners moveRunnersPlayer;
-
+    public MoveRunners moveRunnersPlayer;
+    private BoostPlayerScript boostPlayerScript;
     [SerializeField] private GameObject player;
 
-    void Start()
+    private void Awake()
     {
-        moveRunnersPlayer = player.GetComponent<MoveRunners>();
-
-        StartCoroutine(RollPlayerDice());
+        Instance = this;
     }
 
-    void Update()
+    private void Start()
+    {
+        moveRunnersPlayer = player.GetComponent<MoveRunners>();
+        boostPlayerScript = this.GetComponent<BoostPlayerScript>();
+
+        StartCoroutine(boostPlayerScript.RollPlayerDice());
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown("space") && (isRolling == false))
         {
             isRolling = true;
-            StartCoroutine(RollPlayerDice());   
+            StartCoroutine(boostPlayerScript.RollPlayerDice());   
         }
 
         if (Input.GetKeyDown("return"))
         {
-            StartCoroutine(ChooseNumber());
+            StartCoroutine(boostPlayerScript.ChooseNumber());
         }
 
         if (Input.GetKeyDown("backspace"))
@@ -53,36 +55,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             Application.Quit();
-        }
-    }
-
-    IEnumerator RollPlayerDice()
-    {
-        yield return new WaitForSeconds(1);
-
-        rolledDicePlayer = Random.Range(1, 20);
-        rolledDice1 = Random.Range(1, 20);
-        rolledDice2 = Random.Range(1, 20);
-        rolledDice3 = Random.Range(1, 20);
-        rolledDice4 = Random.Range(1, 20);
-
-        textDicePlayer.text = rolledDicePlayer.ToString();
-        textDice1.text = rolledDice1.ToString();
-        textDice2.text = rolledDice2.ToString();
-        textDice3.text = rolledDice3.ToString();
-        textDice4.text = rolledDice4.ToString();
-
-        isRolling = false;
-    }
-
-    IEnumerator ChooseNumber()
-    {
-        if ((rolledDicePlayer == rolledDice1) || (rolledDicePlayer == rolledDice2) || (rolledDicePlayer == rolledDice3) || (rolledDicePlayer == rolledDice4))
-        {
-            moveRunnersPlayer.speed = 10;
-            StartCoroutine(RollPlayerDice());
-            yield return new WaitForSeconds(1);
-            moveRunnersPlayer.speed = 5;
         }
     }
 }

@@ -4644,6 +4644,7 @@ GameObject:
   - component: {fileID: 2136629936}
   - component: {fileID: 2136629937}
   - component: {fileID: 2136629938}
+  - component: {fileID: 2136629939}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -4684,6 +4685,7 @@ MonoBehaviour:
   textDice3: {fileID: 1971057465}
   textDice4: {fileID: 945822357}
   player: {fileID: 1475256750}
+  boostPlayerScript: {fileID: 0}
 --- !u!114 &2136629938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4700,3 +4702,15 @@ MonoBehaviour:
   runner2: {fileID: 1003774082}
   runner3: {fileID: 1584747222}
   runner4: {fileID: 382030169}
+--- !u!114 &2136629939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136629935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03d8b00fe1329f48844080c00389115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
