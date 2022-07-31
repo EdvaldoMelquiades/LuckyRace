@@ -385,8 +385,9 @@ GameObject:
   m_Component:
   - component: {fileID: 382030172}
   - component: {fileID: 382030171}
-  - component: {fileID: 382030170}
   - component: {fileID: 382030173}
+  - component: {fileID: 382030170}
+  - component: {fileID: 382030174}
   m_Layer: 0
   m_Name: Runner4
   m_TagString: Runner4
@@ -450,7 +451,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6323833a1dabbcc4ba52c93509daf2ab, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.96055627, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -501,6 +502,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 4.96}
   m_EdgeRadius: 0
+--- !u!114 &382030174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382030169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cceda3c41b46c147beeae9ced46c80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Runner: {fileID: 382030169}
 --- !u!1 &452891445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,8 +1407,9 @@ GameObject:
   m_Component:
   - component: {fileID: 811194552}
   - component: {fileID: 811194551}
-  - component: {fileID: 811194550}
   - component: {fileID: 811194553}
+  - component: {fileID: 811194550}
+  - component: {fileID: 811194554}
   m_Layer: 0
   m_Name: Runner1
   m_TagString: Runner1
@@ -1509,6 +1524,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 4.96}
   m_EdgeRadius: 0
+--- !u!114 &811194554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811194549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cceda3c41b46c147beeae9ced46c80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Runner: {fileID: 811194549}
 --- !u!1 &855037766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,8 +1827,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1003774085}
   - component: {fileID: 1003774084}
-  - component: {fileID: 1003774083}
   - component: {fileID: 1003774086}
+  - component: {fileID: 1003774083}
+  - component: {fileID: 1003774087}
   m_Layer: 0
   m_Name: Runner2
   m_TagString: Runner2
@@ -1915,6 +1944,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 4.96}
   m_EdgeRadius: 0
+--- !u!114 &1003774087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003774082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cceda3c41b46c147beeae9ced46c80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Runner: {fileID: 1003774082}
 --- !u!1 &1109542309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,8 +2898,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1475256752}
   - component: {fileID: 1475256751}
-  - component: {fileID: 1475256753}
   - component: {fileID: 1475256754}
+  - component: {fileID: 1475256753}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3252,8 +3294,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1584747225}
   - component: {fileID: 1584747224}
-  - component: {fileID: 1584747223}
   - component: {fileID: 1584747226}
+  - component: {fileID: 1584747223}
+  - component: {fileID: 1584747227}
   m_Layer: 0
   m_Name: Runner3
   m_TagString: Runner3
@@ -3368,6 +3411,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 4.96}
   m_EdgeRadius: 0
+--- !u!114 &1584747227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584747222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cceda3c41b46c147beeae9ced46c80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Runner: {fileID: 1584747222}
 --- !u!1 &1589381618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4643,8 +4699,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2136629936}
   - component: {fileID: 2136629937}
-  - component: {fileID: 2136629938}
-  - component: {fileID: 2136629939}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -4684,33 +4738,6 @@ MonoBehaviour:
   textDice2: {fileID: 1514509347}
   textDice3: {fileID: 1971057465}
   textDice4: {fileID: 945822357}
+  isRolling: 0
+  moveRunnersPlayer: {fileID: 0}
   player: {fileID: 1475256750}
-  boostPlayerScript: {fileID: 0}
---- !u!114 &2136629938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136629935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cceda3c41b46c147beeae9ced46c80a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runner1: {fileID: 811194549}
-  runner2: {fileID: 1003774082}
-  runner3: {fileID: 1584747222}
-  runner4: {fileID: 382030169}
---- !u!114 &2136629939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136629935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c03d8b00fe1329f48844080c00389115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
