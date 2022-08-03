@@ -8,6 +8,7 @@ TagManager:
   - Runner2
   - Runner3
   - Runner4
+  - EndLine
   layers:
   - Default
   - TransparentFX

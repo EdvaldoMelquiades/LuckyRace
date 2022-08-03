@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BoostPlayerScript : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI RunnerLap;
+
     private int rolledDicePlayer;
     private int rolledDice1;
     private int rolledDice2;
     private int rolledDice3;
     private int rolledDice4;
+
+    private int lapsPerformed;
 
     public IEnumerator RollPlayerDice()
     {
@@ -39,6 +44,16 @@ public class BoostPlayerScript : MonoBehaviour
             StartCoroutine(RollPlayerDice());
             yield return new WaitForSeconds(1);
             GameManager.Instance.moveRunnersPlayer.speed = 5;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D Collision)
+    {
+        if (Collision.gameObject.tag == "EndLine")
+        {
+            Debug.Log("Collided");
+            lapsPerformed ++;
+            RunnerLap.text = lapsPerformed.ToString();
         }
     }
 }

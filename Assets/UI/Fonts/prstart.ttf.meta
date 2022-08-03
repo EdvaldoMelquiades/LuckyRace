@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: ad34b4a6bf98fce48b791323e60824de
+guid: a80278f2cd085eb44979f9ec22d6c28a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 28
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - VT323
+  - Press Start
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 2
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1

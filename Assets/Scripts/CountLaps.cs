@@ -17,12 +17,6 @@ public class CountLaps : MonoBehaviour
     public GameObject endRace3rd;
     public GameObject endRaceGameOver;
 
-    [SerializeField] private TextMeshProUGUI  textPlayerLaps;
-    [SerializeField] private TextMeshProUGUI  textRunner1Laps;
-    [SerializeField] private TextMeshProUGUI  textRunner2Laps;
-    [SerializeField] private TextMeshProUGUI  textRunner3Laps;
-    [SerializeField] private TextMeshProUGUI  textRunner4Laps;
-
     private bool runner1Crossed = false;
     private bool runner2Crossed = false;
     private bool runner3Crossed = false;
@@ -30,49 +24,9 @@ public class CountLaps : MonoBehaviour
 
     private int playerPosition = 1;
 
-    private void Start()
-    {
-        // Desnecessário
-        
-        /*textPlayerLaps = GameObject.Find ("PlayerLapsText").GetComponent<TextMeshProUGUI> ();
-        textRunner1Laps = GameObject.Find ("Runner1LapsText").GetComponent<TextMeshProUGUI> ();
-        textRunner2Laps = GameObject.Find ("Runner2LapsText").GetComponent<TextMeshProUGUI> ();
-        textRunner3Laps = GameObject.Find ("Runner3LapsText").GetComponent<TextMeshProUGUI> ();
-        textRunner4Laps = GameObject.Find ("Runner4LapsText").GetComponent<TextMeshProUGUI> ();*/
-    }
-
     private void Update()
     {
         CheckEndRace();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            lapCompletedPlayer ++;
-            textPlayerLaps.text = lapCompletedPlayer.ToString();
-        }
-        if (collision.gameObject.tag == "Runner1")
-        {
-            lapCompletedRunner1 ++;
-            textRunner1Laps.text = lapCompletedRunner1.ToString();
-        }
-        if (collision.gameObject.tag == "Runner2")
-        {
-            lapCompletedRunner2 ++;
-            textRunner2Laps.text = lapCompletedRunner2.ToString();
-        }
-        if (collision.gameObject.tag == "Runner3")
-        {
-            lapCompletedRunner3 ++;
-            textRunner3Laps.text = lapCompletedRunner3.ToString();
-        }
-        if (collision.gameObject.tag == "Runner4")
-        {
-            lapCompletedRunner4 ++;
-            textRunner4Laps.text = lapCompletedRunner4.ToString();
-        }
     }
 
     private void CheckEndRace()
