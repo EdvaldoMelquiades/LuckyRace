@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 100744364}
   - component: {fileID: 100744363}
   m_Layer: 5
-  m_Name: Dice2
+  m_Name: Dice3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +236,7 @@ RectTransform:
   m_Children:
   - {fileID: 1993731435}
   m_Father: {fileID: 1140998495}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -256,14 +256,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.60784316, g: 0.6117647, b: 0.50980395, a: 1}
+  m_Color: {r: 0.21960784, g: 0.7176471, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -471,7 +471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &382030170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,15 +527,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 60e40316ebb69ee4ba08a396f86e8206, type: 3}
-  m_Color: {r: 0.96862745, g: 0.89411765, b: 0.4627451, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7120a756f1e4d064c9585b18bb2756b6, type: 3}
+  m_Color: {r: 0.25490198, g: 0.6509804, b: 0.9647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 6, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &382030172
@@ -546,8 +546,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382030169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 48, y: 48, z: 48}
+  m_LocalPosition: {x: 0, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 311161836}
@@ -570,8 +570,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 1, y: 0.5}
+    oldSize: {x: 6, y: 3}
+    newSize: {x: 6, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 434637584}
   - component: {fileID: 434637583}
   m_Layer: 5
-  m_Name: Dice5
+  m_Name: Dice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,7 +625,7 @@ RectTransform:
   m_Children:
   - {fileID: 945822356}
   m_Father: {fileID: 1140998495}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -645,14 +645,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.42745098, g: 0.96862745, b: 0.75686276, a: 1}
+  m_Color: {r: 0.95686275, g: 0.95686275, b: 0.95686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1104,7 +1104,7 @@ GameObject:
   - component: {fileID: 531067985}
   - component: {fileID: 531067984}
   m_Layer: 5
-  m_Name: Dice4
+  m_Name: Dice5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1124,7 +1124,7 @@ RectTransform:
   m_Children:
   - {fileID: 1971057464}
   m_Father: {fileID: 1140998495}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1144,14 +1144,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.60784316, g: 0.6117647, b: 0.50980395, a: 1}
+  m_Color: {r: 0.95686275, g: 0.95686275, b: 0.95686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.96862745, g: 0.89411765, b: 0.4627451, a: 1}
+  m_Color: {r: 0.25490198, g: 0.6509804, b: 0.9647059, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1393,7 +1393,7 @@ GameObject:
   - component: {fileID: 672693926}
   - component: {fileID: 672693925}
   m_Layer: 5
-  m_Name: Dice3
+  m_Name: Dice4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1413,7 +1413,7 @@ RectTransform:
   m_Children:
   - {fileID: 1514509346}
   m_Father: {fileID: 1140998495}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1433,14 +1433,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.60784316, g: 0.6117647, b: 0.50980395, a: 1}
+  m_Color: {r: 0.95686275, g: 0.95686275, b: 0.95686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1612,7 +1612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &811194550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,15 +1668,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 60e40316ebb69ee4ba08a396f86e8206, type: 3}
-  m_Color: {r: 0.22352941, g: 0.20392157, b: 0.34117648, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7120a756f1e4d064c9585b18bb2756b6, type: 3}
+  m_Color: {r: 1, g: 0.8039216, b: 0.45882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 4.96}
+  m_Size: {x: 6, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &811194552
@@ -1687,9 +1687,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811194549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 48, y: 48, z: 48}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 70, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 311161836}
   m_RootOrder: 1
@@ -1711,8 +1711,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 10, y: 4.96}
+    oldSize: {x: 6, y: 3}
+    newSize: {x: 6, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1778,7 +1778,7 @@ GameObject:
   - component: {fileID: 945822358}
   - component: {fileID: 945822357}
   m_Layer: 5
-  m_Name: Dice4Text
+  m_Name: Dice2Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1920,7 +1920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1003774083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1976,15 +1976,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 60e40316ebb69ee4ba08a396f86e8206, type: 3}
-  m_Color: {r: 0.9764706, g: 0.57254905, b: 0.32156864, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7120a756f1e4d064c9585b18bb2756b6, type: 3}
+  m_Color: {r: 0.21960784, g: 0.7176471, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 6, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1003774085
@@ -1995,8 +1995,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003774082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 48, y: 48, z: 48}
+  m_LocalPosition: {x: 0, y: 50, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 311161836}
@@ -2019,8 +2019,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 1, y: 0.5}
+    oldSize: {x: 6, y: 3}
+    newSize: {x: 6, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -2393,10 +2393,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1609105160}
+  - {fileID: 434637582}
   - {fileID: 100744362}
   - {fileID: 672693924}
   - {fileID: 531067983}
-  - {fileID: 434637582}
   m_Father: {fileID: 1824371061}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2418,7 +2418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.42352942, b: 0.5058824, a: 1}
+  m_Color: {r: 0.5803922, g: 0.6901961, b: 0.7607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2495,7 +2495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9764706, g: 0.57254905, b: 0.32156864, a: 1}
+  m_Color: {r: 0.21960784, g: 0.7176471, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2947,7 +2947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.06666667, g: 0.6784314, b: 0.75686276, a: 1}
+  m_Color: {r: 0.69411767, g: 0.24313726, b: 0.3254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3033,15 +3033,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 60e40316ebb69ee4ba08a396f86e8206, type: 3}
-  m_Color: {r: 0.06666667, g: 0.6784314, b: 0.75686276, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7120a756f1e4d064c9585b18bb2756b6, type: 3}
+  m_Color: {r: 0.69411767, g: 0.24313726, b: 0.3254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 6, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1475256752
@@ -3052,8 +3052,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475256750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 48.000004, y: 48, z: 48}
+  m_LocalPosition: {x: 0, y: 90, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 311161836}
@@ -3090,8 +3090,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 6, y: 3}
+    newSize: {x: 6, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3111,7 +3111,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03d8b00fe1329f48844080c00389115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 2136629935}
   RunnerLap: {fileID: 766885168}
+  Dice1: {fileID: 1609105161}
+  Dice2: {fileID: 434637583}
+  Dice3: {fileID: 100744363}
+  Dice4: {fileID: 672693925}
+  Dice5: {fileID: 531067984}
+  MatchColor: {r: 0.21960784, g: 0.7176471, b: 0.39215687, a: 1}
+  NormalColor: {r: 0.95686275, g: 0.95686275, b: 0.95686275, a: 1}
 --- !u!1 &1483314168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,7 +3267,7 @@ GameObject:
   - component: {fileID: 1514509348}
   - component: {fileID: 1514509347}
   m_Layer: 5
-  m_Name: Dice2Text
+  m_Name: Dice4Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3401,7 +3409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1584747223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3457,15 +3465,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 60e40316ebb69ee4ba08a396f86e8206, type: 3}
-  m_Color: {r: 0.6313726, g: 0.8980392, b: 0.3529412, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7120a756f1e4d064c9585b18bb2756b6, type: 3}
+  m_Color: {r: 0.16078432, g: 0.21176471, b: 0.43529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 4.96}
+  m_Size: {x: 6, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1584747225
@@ -3476,8 +3484,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584747222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 48, y: 48, z: 48}
+  m_LocalPosition: {x: 0, y: 30, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 311161836}
@@ -3500,8 +3508,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 10, y: 4.96}
+    oldSize: {x: 6, y: 3}
+    newSize: {x: 6, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3677,14 +3685,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.42745098, g: 0.96862745, b: 0.75686276, a: 1}
+  m_Color: {r: 0.21960784, g: 0.7176471, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4024,7 +4032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6313726, g: 0.8980392, b: 0.3529412, a: 1}
+  m_Color: {r: 0.16078432, g: 0.21176471, b: 0.43529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4324,7 +4332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41568628, g: 0.21568628, b: 0.44313726, a: 1}
+  m_Color: {r: 1, g: 0.8039216, b: 0.45882353, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4361,7 +4369,7 @@ GameObject:
   - component: {fileID: 1971057466}
   - component: {fileID: 1971057465}
   m_Layer: 5
-  m_Name: Dice3Text
+  m_Name: Dice5Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4496,7 +4504,7 @@ GameObject:
   - component: {fileID: 1993731437}
   - component: {fileID: 1993731436}
   m_Layer: 5
-  m_Name: Dice2Text
+  m_Name: Dice3Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4906,7 +4914,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2136629936}
   - component: {fileID: 2136629937}
-  - component: {fileID: 2136629938}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -4938,27 +4945,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2136629935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 432697efc3aee8c4da1bd8fd2a1aed90, type: 3}
+  m_Script: {fileID: 11500000, guid: a049386a6e468e74ead6e77c38bfc70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDicePlayer: {fileID: 452891447}
-  textDice1: {fileID: 1993731436}
-  textDice2: {fileID: 1514509347}
-  textDice3: {fileID: 1971057465}
-  textDice4: {fileID: 945822357}
+  textDice1: {fileID: 452891447}
+  textDice2: {fileID: 945822357}
+  textDice3: {fileID: 1993731436}
+  textDice4: {fileID: 1514509347}
+  textDice5: {fileID: 1971057465}
   isRolling: 0
-  moveRunnersPlayer: {fileID: 0}
+  moveRunnersPlayer: {fileID: 1475256753}
   player: {fileID: 1475256750}
---- !u!114 &2136629938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136629935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c03d8b00fe1329f48844080c00389115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RunnerLap: {fileID: 0}

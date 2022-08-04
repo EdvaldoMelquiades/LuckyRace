@@ -4,15 +4,13 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManagerScript : MonoBehaviour
 {
-    public static GameManager Instance;
-
-    [SerializeField] public TextMeshProUGUI  textDicePlayer;
     [SerializeField] public TextMeshProUGUI  textDice1;
     [SerializeField] public TextMeshProUGUI  textDice2;
     [SerializeField] public TextMeshProUGUI  textDice3;
     [SerializeField] public TextMeshProUGUI  textDice4;
+    [SerializeField] public TextMeshProUGUI  textDice5;
 
     public bool isRolling;
 
@@ -20,17 +18,12 @@ public class GameManager : MonoBehaviour
     private BoostPlayerScript boostPlayerScript;
     [SerializeField] private GameObject player;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
-
     private void Start()
     {
         moveRunnersPlayer = player.GetComponent<MoveRunners>();
-        boostPlayerScript = this.GetComponent<BoostPlayerScript>();
+        boostPlayerScript = player.GetComponent<BoostPlayerScript>();
 
-        StartCoroutine(boostPlayerScript.RollPlayerDice());
+        StartCoroutine(boostPlayerScript.RollDices());
     }
 
     private void Update()
@@ -38,12 +31,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("space") && (isRolling == false))
         {
             isRolling = true;
-            StartCoroutine(boostPlayerScript.RollPlayerDice());   
+            StartCoroutine(boostPlayerScript.RollDices());   
         }
 
         if (Input.GetKeyDown("return"))
         {
-            StartCoroutine(boostPlayerScript.ChooseNumber());
+            StartCoroutine(boostPlayerScript.PickDices());
         }
 
         if (Input.GetKeyDown("backspace"))
