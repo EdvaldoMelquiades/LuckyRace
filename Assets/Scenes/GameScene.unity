@@ -1363,7 +1363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2402,8 +2402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -501.73, y: 154.99997}
-  m_SizeDelta: {x: 1003.5, y: 310}
+  m_AnchoredPosition: {x: -500, y: 155}
+  m_SizeDelta: {x: 600, y: 310}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140998496
 MonoBehaviour:
@@ -2425,7 +2425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2502,7 +2502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2532,7 +2532,6 @@ GameObject:
   - component: {fileID: 1210747825}
   - component: {fileID: 1210747824}
   - component: {fileID: 1210747823}
-  - component: {fileID: 1210747827}
   m_Layer: 0
   m_Name: EndLine
   m_TagString: EndLine
@@ -2654,28 +2653,6 @@ Transform:
   m_Father: {fileID: 2109899170}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1210747827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210747821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f087190bec2e52b47b9fb7133d6d0fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lapCompletedPlayer: 0
-  lapCompletedRunner1: 0
-  lapCompletedRunner2: 0
-  lapCompletedRunner3: 0
-  lapCompletedRunner4: 0
-  endRacePanel: {fileID: 86880259}
-  endRace1st: {fileID: 1129012251}
-  endRace2nd: {fileID: 1739127219}
-  endRace3rd: {fileID: 521508410}
-  endRaceGameOver: {fileID: 1251186476}
 --- !u!1 &1251186476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4039,7 +4016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4110,14 +4087,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4213,8 +4190,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 303.27, y: 155.00002}
-  m_SizeDelta: {x: 606.54, y: 310}
+  m_AnchoredPosition: {x: 500, y: 155.00002}
+  m_SizeDelta: {x: 600, y: 310}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956117181
 MonoBehaviour:
@@ -4255,7 +4232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.42352942, b: 0.5058824, a: 1}
+  m_Color: {r: 0.3764706, g: 0.42352942, b: 0.5058824, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4339,7 +4316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04bbfda75e0bccc4081f1004ee8c6d07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499417352f344ed4ab4b12ad2486480c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4948,11 +4925,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a049386a6e468e74ead6e77c38bfc70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1475256750}
+  PlayerLap: {fileID: 766885168}
+  Enemy1Lap: {fileID: 160975286}
+  Enemy2Lap: {fileID: 617782492}
+  Enemy3Lap: {fileID: 1623028730}
+  Enemy4Lap: {fileID: 2049688647}
   textDice1: {fileID: 452891447}
   textDice2: {fileID: 945822357}
   textDice3: {fileID: 1993731436}
   textDice4: {fileID: 1514509347}
   textDice5: {fileID: 1971057465}
   isRolling: 0
-  moveRunnersPlayer: {fileID: 1475256753}
-  player: {fileID: 1475256750}
+  lapCompletedPlayer: 0
+  lapCompletedRunner1: 0
+  lapCompletedRunner2: 0
+  lapCompletedRunner3: 0
+  lapCompletedRunner4: 0
+  endRacePanel: {fileID: 86880259}
+  endRace1st: {fileID: 1129012251}
+  endRace2nd: {fileID: 1739127219}
+  endRace3rd: {fileID: 521508410}
+  endRaceGameOver: {fileID: 1251186476}

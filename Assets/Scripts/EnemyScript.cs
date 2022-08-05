@@ -3,34 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class BoostNPCsScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
     [SerializeField] private GameObject Runner;
     [SerializeField] private TextMeshProUGUI RunnerLap;
-
     private MoveRunners MoveRunners;
-
     private bool isTurboActive;
-    private int lapsPerformed;
+    public int lapsPerformed;
 
     private void Start()
     {
         MoveRunners = Runner.GetComponent<MoveRunners>();
-        
-        InvokeRepeating("NPCRunnersSpeed1", 1f, 1f);
+        InvokeRepeating("RunnersBoostSpeed", 1f, 1f);
     }
 
     private void OnTriggerEnter2D(Collider2D Collision)
     {
         if (Collision.gameObject.tag == "EndLine")
         {
-            Debug.Log("Collided");
             lapsPerformed ++;
             RunnerLap.text = lapsPerformed.ToString();
         }
     }
 
-    void NPCRunnersSpeed1()
+    void RunnersBoostSpeed()
     {
         if (isTurboActive == false)
         {

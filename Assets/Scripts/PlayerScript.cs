@@ -4,34 +4,30 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class BoostPlayerScript : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private GameObject GameManager;
-
     [SerializeField] private TextMeshProUGUI RunnerLap;
-
     [SerializeField] private Image Dice1;
     [SerializeField] private Image Dice2;
     [SerializeField] private Image Dice3;
     [SerializeField] private Image Dice4;
     [SerializeField] private Image Dice5;
-
     [SerializeField] private Color MatchColor;
     [SerializeField] private Color NormalColor;
-
     private GameManagerScript GameManagerScript;
-
+    private MoveRunners MoveRunners;
     private int rolledDice1;
     private int rolledDice2;
     private int rolledDice3;
     private int rolledDice4;
     private int rolledDice5;
-
-    private int lapsPerformed;
+    public int lapsPerformed;
 
     private void Start()
     {
         GameManagerScript = GameManager.GetComponent<GameManagerScript>();
+        MoveRunners = this.GetComponent<MoveRunners>();
     }
 
     public IEnumerator RollDices()
@@ -65,10 +61,10 @@ public class BoostPlayerScript : MonoBehaviour
     {
         if ((rolledDice1 == rolledDice2) || (rolledDice1 == rolledDice3) || (rolledDice1 == rolledDice4) || (rolledDice1 == rolledDice5))
         {
-            GameManagerScript.moveRunnersPlayer.speed = 10;
+            MoveRunners.speed = 10;
             StartCoroutine(RollDices());
             yield return new WaitForSeconds(1);
-            GameManagerScript.moveRunnersPlayer.speed = 5;
+            MoveRunners.speed = 5;
         }
     }
 
@@ -76,7 +72,6 @@ public class BoostPlayerScript : MonoBehaviour
     {
         if (Collision.gameObject.tag == "EndLine")
         {
-            Debug.Log("Collided");
             lapsPerformed ++;
             RunnerLap.text = lapsPerformed.ToString();
         }
