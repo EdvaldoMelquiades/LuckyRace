@@ -223,7 +223,12 @@ namespace PathCreation {
             var data = CalculatePercentOnPathData (t, endOfPathInstruction);
             Vector3 direction = Vector3.Lerp (localTangents[data.previousIndex], localTangents[data.nextIndex], data.percentBetweenIndices);
             Vector3 normal = Vector3.Lerp (localNormals[data.previousIndex], localNormals[data.nextIndex], data.percentBetweenIndices);
-            return Quaternion.LookRotation (MathUtility.TransformDirection (direction, transform, space), MathUtility.TransformDirection (normal, transform, space));
+
+            // Changed From
+            //return Quaternion.LookRotation (MathUtility.TransformDirection (direction, transform, space), MathUtility.TransformDirection (normal, transform, space));
+
+            // Changed To
+            return Quaternion.LookRotation (Vector3.forward, MathUtility.TransformDirection (normal, transform, space));
         }
 
         /// Finds the closest point on the path from any point in the world

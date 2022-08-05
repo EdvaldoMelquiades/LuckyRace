@@ -40,11 +40,11 @@ public class PlayerScript : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        rolledDice1 = Random.Range(1, 20);
-        rolledDice2 = Random.Range(1, 20);
-        rolledDice3 = Random.Range(1, 20);
-        rolledDice4 = Random.Range(1, 20);
-        rolledDice5 = Random.Range(1, 20);
+        rolledDice1 = Random.Range(1, 6);
+        rolledDice2 = Random.Range(1, 6);
+        rolledDice3 = Random.Range(1, 6);
+        rolledDice4 = Random.Range(1, 6);
+        rolledDice5 = Random.Range(1, 6);
     
         GameManagerScript.textDice1.text = rolledDice1.ToString();
         GameManagerScript.textDice2.text = rolledDice2.ToString();
