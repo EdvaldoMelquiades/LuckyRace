@@ -7,27 +7,47 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private GameObject GameManager;
+
     [SerializeField] private TextMeshProUGUI RunnerLap;
+
     [SerializeField] private Image Dice1;
     [SerializeField] private Image Dice2;
     [SerializeField] private Image Dice3;
     [SerializeField] private Image Dice4;
     [SerializeField] private Image Dice5;
+
     [SerializeField] private Color MatchColor;
     [SerializeField] private Color NormalColor;
+
+    private Animator dice1Animation;
+    private Animator dice2Animation;
+    private Animator dice3Animation;
+    private Animator dice4Animation;
+    private Animator dice5Animation;
+
     private GameManagerScript GameManagerScript;
+
     private MoveRunners MoveRunners;
+
     private int rolledDice1;
     private int rolledDice2;
     private int rolledDice3;
     private int rolledDice4;
     private int rolledDice5;
+
     public int lapsPerformed;
 
     private void Start()
     {
         GameManagerScript = GameManager.GetComponent<GameManagerScript>();
+
         MoveRunners = this.GetComponent<MoveRunners>();
+
+        dice1Animation = Dice1.GetComponent<Animator>();
+        dice2Animation = Dice2.GetComponent<Animator>();
+        dice3Animation = Dice3.GetComponent<Animator>();
+        dice4Animation = Dice4.GetComponent<Animator>();
+        dice5Animation = Dice5.GetComponent<Animator>();
     }
 
     public IEnumerator RollDices()
@@ -37,6 +57,12 @@ public class PlayerScript : MonoBehaviour
         Dice3.color = NormalColor;
         Dice4.color = NormalColor;
         Dice5.color = NormalColor;
+
+        dice1Animation.SetTrigger("isRotating");
+        dice2Animation.SetTrigger("isRotating");
+        dice3Animation.SetTrigger("isRotating");
+        dice4Animation.SetTrigger("isRotating");
+        dice5Animation.SetTrigger("isRotating");
 
         yield return new WaitForSeconds(1);
 
