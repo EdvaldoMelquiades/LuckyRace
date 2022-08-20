@@ -70,7 +70,7 @@ public class GameManagerScript : MonoBehaviour
         if (Input.GetKeyDown("space") && (isRolling == false))
         {
             isRolling = true;
-            StartCoroutine(PlayerScript.RollDices());   
+            StartCoroutine(PlayerScript.RollDices()); 
         }
 
         if (Input.GetKeyDown("return"))
@@ -78,7 +78,7 @@ public class GameManagerScript : MonoBehaviour
             StartCoroutine(PlayerScript.PickDices());
         }
 
-        if (Input.GetKeyDown("backspace"))
+        if (Input.GetKeyDown("backspace") && (Time.timeScale == 0))
         {
             SceneManager.LoadScene(0);
             Time.timeScale = 1;

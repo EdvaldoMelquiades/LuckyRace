@@ -5,16 +5,21 @@ using TMPro;
 
 public class EnemyScript : MonoBehaviour
 {
-    [SerializeField] private GameObject Runner;
-    [SerializeField] private TextMeshProUGUI RunnerLap;
-    private MoveRunners MoveRunners;
-    private bool isTurboActive;
     public int lapsPerformed;
+
+    [SerializeField] private GameObject Runner;
+
+    [SerializeField] private TextMeshProUGUI RunnerLap;
+
+    private MoveRunners MoveRunners;
+
+    private bool isTurboActive;
 
     private void Start()
     {
         MoveRunners = Runner.GetComponent<MoveRunners>();
-        InvokeRepeating("RunnersBoostSpeed", 1f, 1f);
+
+        StartCoroutine(NPCSpeedBoost());
     }
 
     private void OnTriggerEnter2D(Collider2D Collision)
@@ -26,21 +31,22 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    void RunnersBoostSpeed()
+    private IEnumerator NPCSpeedBoost()
     {
-        if (isTurboActive == false)
+        while (true)
         {
-            int rollSpeedRunners = Random.Range(1, 20);
+            yield return new WaitForSeconds(1);
+            
+            int rollSpeedRunners = Random.Range(1, 6);
 
-            if ((rollSpeedRunners == 1) || (rollSpeedRunners == 2))
+            if (rollSpeedRunners == 1)
             {
                 MoveRunners.speed = 10;
-                isTurboActive = true;
             }
-        }
-        else{
-            MoveRunners.speed = 5;
-            isTurboActive = false;
+            else
+            {
+                MoveRunners.speed = 5;
+            }
         }
     }
 }
