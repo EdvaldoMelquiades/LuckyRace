@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
+    [Header("Dice Roll SFX")] // Header Attribute
+    [SerializeField] private AudioClip diceRollClip;
+    [Space(10)] // Space Attribute
+
     [SerializeField] private GameObject GameManager;
 
     [SerializeField] private TextMeshProUGUI RunnerLap;
@@ -52,6 +56,8 @@ public class PlayerScript : MonoBehaviour
 
     public IEnumerator RollDices()
     {
+        AudioManagerScript.Instance.PlayRandomSound(diceRollClip);
+
         Dice1.color = NormalColor;
         Dice2.color = NormalColor;
         Dice3.color = NormalColor;
